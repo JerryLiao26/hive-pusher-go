@@ -1,4 +1,4 @@
-package hive-pusher-go
+package hive
 
 import (
 	"bytes"
@@ -13,14 +13,14 @@ type reqMessage struct {
 }
 
 type resMessage struct {
-	Code int `json:"code"`
-	Text string `json:"text"`
+	Code   int    `json:"code"`
+	Text   string `json:"text"`
 	Method string `json:"method"`
 }
 
 /* Pusher and functions */
-type Pusher struct{
-	Path string
+type Pusher struct {
+	Path  string
 	Token string
 }
 
