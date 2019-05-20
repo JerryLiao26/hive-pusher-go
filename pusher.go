@@ -9,6 +9,7 @@ import (
 
 /* Message struct */
 type reqMessage struct {
+	Text  string `json:"text"`
 	Token string `json:"token"`
 }
 
@@ -32,8 +33,9 @@ func (p Pusher) SetToken(token string) {
 	p.Token = token
 }
 
-func (p Pusher) Send() {
+func (p Pusher) Send(message string) {
 	req := reqMessage{
+		Text: message,
 		Token: p.Token,
 	}
 	buff := new(bytes.Buffer)
