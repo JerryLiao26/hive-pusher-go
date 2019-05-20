@@ -1,4 +1,4 @@
-package hive
+package hive-pusher-go
 
 import (
 	"bytes"
